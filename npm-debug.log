@@ -1,0 +1,915 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'raspi-io' ]
+2 info using npm@3.10.8
+3 info using node@v6.6.0
+4 verbose config Skipping project config: /Users/linyuxuan/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData raspi-io
+9 silly fetchNamedPackageData raspi-io
+10 silly mapToRegistry name raspi-io
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'raspi-io',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'raspi-io',
+13 silly mapToRegistry   name: 'raspi-io',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/raspi-io
+15 verbose request uri https://registry.npmjs.org/raspi-io
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 8:53:05 PM
+18 verbose request id 1a0c53616cec300c
+19 verbose etag "C9NI24R90MKU4B0LJ5BY1DFZ5"
+20 http request GET https://registry.npmjs.org/raspi-io
+21 http 304 https://registry.npmjs.org/raspi-io
+22 verbose headers { date: 'Thu, 29 Sep 2016 10:53:05 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: '"C9NI24R90MKU4B0LJ5BY1DFZ5"',
+22 verbose headers   age: '113',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-mel6522-MEL',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '1',
+22 verbose headers   'x-timer': 'S1475146385.942344,VS0,VE0',
+22 verbose headers   vary: 'Accept-Encoding' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Thu, 29 Sep 2016 10:53:05 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: '"C9NI24R90MKU4B0LJ5BY1DFZ5"',
+23 silly get     age: '113',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-mel6522-MEL',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1475146385.942344,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose etag https://registry.npmjs.org/raspi-io from cache
+25 verbose get saving raspi-io to /Users/linyuxuan/.npm/registry.npmjs.org/raspi-io/.cache.json
+26 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule raspi-io@6.1.0 checking installable status
+40 silly cache add args [ 'raspi-io', null ]
+41 verbose cache add spec raspi-io
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'raspi-io',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'raspi-io',
+42 silly cache add   name: 'raspi-io',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed raspi-io@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for raspi-io
+45 info addNameTag [ 'raspi-io', 'latest' ]
+46 silly mapToRegistry name raspi-io
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'raspi-io',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'raspi-io',
+49 silly mapToRegistry   name: 'raspi-io',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/raspi-io
+51 verbose addNameTag registry:https://registry.npmjs.org/raspi-io not in flight; fetching
+52 verbose get https://registry.npmjs.org/raspi-io not expired, no request
+53 silly addNameTag next cb for raspi-io with tag latest
+54 silly addNamed raspi-io@6.1.0
+55 verbose addNamed "6.1.0" is a plain semver version for raspi-io
+56 silly cache afterAdd raspi-io@6.1.0
+57 verbose afterAdd /Users/linyuxuan/.npm/raspi-io/6.1.0/package/package.json not in flight; writing
+58 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+59 verbose afterAdd /Users/linyuxuan/.npm/raspi-io/6.1.0/package/package.json written
+60 silly fetchNamedPackageData raspi
+61 silly mapToRegistry name raspi
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry data Result {
+64 silly mapToRegistry   raw: 'raspi',
+64 silly mapToRegistry   scope: null,
+64 silly mapToRegistry   escapedName: 'raspi',
+64 silly mapToRegistry   name: 'raspi',
+64 silly mapToRegistry   rawSpec: '',
+64 silly mapToRegistry   spec: 'latest',
+64 silly mapToRegistry   type: 'tag' }
+65 silly mapToRegistry uri https://registry.npmjs.org/raspi
+66 verbose request uri https://registry.npmjs.org/raspi
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 8:53:05 PM
+69 verbose etag "72DGPG55MO4D03OSAZFD948V"
+70 http request GET https://registry.npmjs.org/raspi
+71 http 304 https://registry.npmjs.org/raspi
+72 verbose headers { date: 'Thu, 29 Sep 2016 10:53:06 GMT',
+72 verbose headers   via: '1.1 varnish',
+72 verbose headers   'cache-control': 'max-age=300',
+72 verbose headers   etag: '"72DGPG55MO4D03OSAZFD948V"',
+72 verbose headers   age: '112',
+72 verbose headers   connection: 'keep-alive',
+72 verbose headers   'x-served-by': 'cache-mel6522-MEL',
+72 verbose headers   'x-cache': 'HIT',
+72 verbose headers   'x-cache-hits': '1',
+72 verbose headers   'x-timer': 'S1475146386.100404,VS0,VE0',
+72 verbose headers   vary: 'Accept-Encoding' }
+73 silly get cb [ 304,
+73 silly get   { date: 'Thu, 29 Sep 2016 10:53:06 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     etag: '"72DGPG55MO4D03OSAZFD948V"',
+73 silly get     age: '112',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-mel6522-MEL',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '1',
+73 silly get     'x-timer': 'S1475146386.100404,VS0,VE0',
+73 silly get     vary: 'Accept-Encoding' } ]
+74 verbose etag https://registry.npmjs.org/raspi from cache
+75 verbose get saving raspi to /Users/linyuxuan/.npm/registry.npmjs.org/raspi/.cache.json
+76 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+77 silly resolveWithNewModule raspi@2.1.0 checking installable status
+78 silly cache add args [ 'raspi@^2.1.0', null ]
+79 verbose cache add spec raspi@^2.1.0
+80 silly cache add parsed spec Result {
+80 silly cache add   raw: 'raspi@^2.1.0',
+80 silly cache add   scope: null,
+80 silly cache add   escapedName: 'raspi',
+80 silly cache add   name: 'raspi',
+80 silly cache add   rawSpec: '^2.1.0',
+80 silly cache add   spec: '>=2.1.0 <3.0.0',
+80 silly cache add   type: 'range' }
+81 silly addNamed raspi@>=2.1.0 <3.0.0
+82 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for raspi
+83 silly addNameRange { name: 'raspi', range: '>=2.1.0 <3.0.0', hasData: false }
+84 silly mapToRegistry name raspi
+85 silly mapToRegistry using default registry
+86 silly mapToRegistry registry https://registry.npmjs.org/
+87 silly mapToRegistry data Result {
+87 silly mapToRegistry   raw: 'raspi',
+87 silly mapToRegistry   scope: null,
+87 silly mapToRegistry   escapedName: 'raspi',
+87 silly mapToRegistry   name: 'raspi',
+87 silly mapToRegistry   rawSpec: '',
+87 silly mapToRegistry   spec: 'latest',
+87 silly mapToRegistry   type: 'tag' }
+88 silly mapToRegistry uri https://registry.npmjs.org/raspi
+89 verbose addNameRange registry:https://registry.npmjs.org/raspi not in flight; fetching
+90 verbose get https://registry.npmjs.org/raspi not expired, no request
+91 silly addNameRange number 2 { name: 'raspi', range: '>=2.1.0 <3.0.0', hasData: true }
+92 silly addNameRange versions [ 'raspi',
+92 silly addNameRange   [ '1.1.6', '1.2.0', '1.3.0', '1.3.1', '1.3.2', '2.0.0', '2.1.0' ] ]
+93 silly addNamed raspi@2.1.0
+94 verbose addNamed "2.1.0" is a plain semver version for raspi
+95 silly cache afterAdd raspi@2.1.0
+96 verbose afterAdd /Users/linyuxuan/.npm/raspi/2.1.0/package/package.json not in flight; writing
+97 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+98 verbose afterAdd /Users/linyuxuan/.npm/raspi/2.1.0/package/package.json written
+99 silly fetchNamedPackageData raspi-wiringpi
+100 silly mapToRegistry name raspi-wiringpi
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry data Result {
+103 silly mapToRegistry   raw: 'raspi-wiringpi',
+103 silly mapToRegistry   scope: null,
+103 silly mapToRegistry   escapedName: 'raspi-wiringpi',
+103 silly mapToRegistry   name: 'raspi-wiringpi',
+103 silly mapToRegistry   rawSpec: '',
+103 silly mapToRegistry   spec: 'latest',
+103 silly mapToRegistry   type: 'tag' }
+104 silly mapToRegistry uri https://registry.npmjs.org/raspi-wiringpi
+105 verbose request uri https://registry.npmjs.org/raspi-wiringpi
+106 verbose request no auth needed
+107 info attempt registry request try #1 at 8:53:05 PM
+108 verbose etag "262GP3Y5XJJ3WGVROJNVKACSN"
+109 http request GET https://registry.npmjs.org/raspi-wiringpi
+110 http 304 https://registry.npmjs.org/raspi-wiringpi
+111 verbose headers { date: 'Thu, 29 Sep 2016 10:53:06 GMT',
+111 verbose headers   via: '1.1 varnish',
+111 verbose headers   'cache-control': 'max-age=300',
+111 verbose headers   etag: '"262GP3Y5XJJ3WGVROJNVKACSN"',
+111 verbose headers   age: '111',
+111 verbose headers   connection: 'keep-alive',
+111 verbose headers   'x-served-by': 'cache-mel6522-MEL',
+111 verbose headers   'x-cache': 'HIT',
+111 verbose headers   'x-cache-hits': '1',
+111 verbose headers   'x-timer': 'S1475146386.123506,VS0,VE0',
+111 verbose headers   vary: 'Accept-Encoding' }
+112 silly get cb [ 304,
+112 silly get   { date: 'Thu, 29 Sep 2016 10:53:06 GMT',
+112 silly get     via: '1.1 varnish',
+112 silly get     'cache-control': 'max-age=300',
+112 silly get     etag: '"262GP3Y5XJJ3WGVROJNVKACSN"',
+112 silly get     age: '111',
+112 silly get     connection: 'keep-alive',
+112 silly get     'x-served-by': 'cache-mel6522-MEL',
+112 silly get     'x-cache': 'HIT',
+112 silly get     'x-cache-hits': '1',
+112 silly get     'x-timer': 'S1475146386.123506,VS0,VE0',
+112 silly get     vary: 'Accept-Encoding' } ]
+113 verbose etag https://registry.npmjs.org/raspi-wiringpi from cache
+114 verbose get saving raspi-wiringpi to /Users/linyuxuan/.npm/registry.npmjs.org/raspi-wiringpi/.cache.json
+115 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+116 silly resolveWithNewModule raspi-wiringpi@1.0.6 checking installable status
+117 silly cache add args [ 'raspi-wiringpi@1.0.6', null ]
+118 verbose cache add spec raspi-wiringpi@1.0.6
+119 silly cache add parsed spec Result {
+119 silly cache add   raw: 'raspi-wiringpi@1.0.6',
+119 silly cache add   scope: null,
+119 silly cache add   escapedName: 'raspi-wiringpi',
+119 silly cache add   name: 'raspi-wiringpi',
+119 silly cache add   rawSpec: '1.0.6',
+119 silly cache add   spec: '1.0.6',
+119 silly cache add   type: 'version' }
+120 silly addNamed raspi-wiringpi@1.0.6
+121 verbose addNamed "1.0.6" is a plain semver version for raspi-wiringpi
+122 silly mapToRegistry name raspi-wiringpi
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry https://registry.npmjs.org/
+125 silly mapToRegistry data Result {
+125 silly mapToRegistry   raw: 'raspi-wiringpi',
+125 silly mapToRegistry   scope: null,
+125 silly mapToRegistry   escapedName: 'raspi-wiringpi',
+125 silly mapToRegistry   name: 'raspi-wiringpi',
+125 silly mapToRegistry   rawSpec: '',
+125 silly mapToRegistry   spec: 'latest',
+125 silly mapToRegistry   type: 'tag' }
+126 silly mapToRegistry uri https://registry.npmjs.org/raspi-wiringpi
+127 verbose addNameVersion registry:https://registry.npmjs.org/raspi-wiringpi not in flight; fetching
+128 verbose get https://registry.npmjs.org/raspi-wiringpi not expired, no request
+129 silly cache afterAdd raspi-wiringpi@1.0.6
+130 verbose afterAdd /Users/linyuxuan/.npm/raspi-wiringpi/1.0.6/package/package.json not in flight; writing
+131 verbose correctMkdir /Users/linyuxuan/.npm correctMkdir not in flight; initializing
+132 verbose afterAdd /Users/linyuxuan/.npm/raspi-wiringpi/1.0.6/package/package.json written
+133 silly loadAllDepsIntoIdealTree Finishing
+134 silly loadIdealTree Finishing
+135 silly currentTree linyuxuan
+135 silly currentTree ├── accepts@1.3.3
+135 silly currentTree ├── append-field@0.1.0
+135 silly currentTree ├── array-flatten@1.1.1
+135 silly currentTree ├── bindings@1.2.1
+135 silly currentTree ├── bluebird@3.4.6
+135 silly currentTree ├── body-parser@1.15.2
+135 silly currentTree ├── busboy@0.2.13
+135 silly currentTree ├── bytes@2.4.0
+135 silly currentTree ├─┬ concat-stream@1.5.2
+135 silly currentTree │ ├── isarray@1.0.0
+135 silly currentTree │ └── readable-stream@2.0.6
+135 silly currentTree ├── content-disposition@0.5.1
+135 silly currentTree ├── content-type@1.0.2
+135 silly currentTree ├── cookie-parser@1.4.3
+135 silly currentTree ├── cookie-signature@1.0.6
+135 silly currentTree ├── cookie@0.3.1
+135 silly currentTree ├── core-util-is@1.0.2
+135 silly currentTree ├── debug@2.2.0
+135 silly currentTree ├── define-properties@1.1.2
+135 silly currentTree ├── depd@1.1.0
+135 silly currentTree ├── destroy@1.0.4
+135 silly currentTree ├── dicer@0.2.5
+135 silly currentTree ├── ee-first@1.1.1
+135 silly currentTree ├── encodeurl@1.0.1
+135 silly currentTree ├── escape-html@1.0.3
+135 silly currentTree ├── etag@1.7.0
+135 silly currentTree ├── express@4.14.0
+135 silly currentTree ├── finalhandler@0.5.0
+135 silly currentTree ├── foreach@2.0.5
+135 silly currentTree ├── forwarded@0.1.0
+135 silly currentTree ├── fresh@0.3.0
+135 silly currentTree ├── function-bind@1.1.0
+135 silly currentTree ├── http-errors@1.5.0
+135 silly currentTree ├── i2c-bus@1.1.1
+135 silly currentTree ├── iconv-lite@0.4.13
+135 silly currentTree ├── inherits@2.0.1
+135 silly currentTree ├── ini-builder@1.0.3
+135 silly currentTree ├── ipaddr.js@1.1.1
+135 silly currentTree ├── isarray@0.0.1
+135 silly currentTree ├── media-typer@0.3.0
+135 silly currentTree ├── merge-descriptors@1.0.1
+135 silly currentTree ├── methods@1.1.2
+135 silly currentTree ├── mime-db@1.24.0
+135 silly currentTree ├── mime-types@2.1.12
+135 silly currentTree ├── mime@1.3.4
+135 silly currentTree ├── minimist@0.0.8
+135 silly currentTree ├── mkdirp@0.5.1
+135 silly currentTree ├── ms@0.7.1
+135 silly currentTree ├── multer@1.2.0
+135 silly currentTree ├── nan@2.4.0
+135 silly currentTree ├── negotiator@0.6.1
+135 silly currentTree ├── object-assign@3.0.0
+135 silly currentTree ├── object-keys@1.0.11
+135 silly currentTree ├── object.assign@4.0.4
+135 silly currentTree ├── on-finished@2.3.0
+135 silly currentTree ├── optimist@0.6.1
+135 silly currentTree ├── parseurl@1.3.1
+135 silly currentTree ├── path-to-regexp@0.1.7
+135 silly currentTree ├── process-nextick-args@1.0.7
+135 silly currentTree ├── proxy-addr@1.1.2
+135 silly currentTree ├── qs@6.2.0
+135 silly currentTree ├── range-parser@1.2.0
+135 silly currentTree ├── raspi-board@3.2.0
+135 silly currentTree ├── raspi-gpio@2.3.0
+135 silly currentTree ├── raspi-i2c@3.1.0
+135 silly currentTree ├── raspi-led@1.5.0
+135 silly currentTree ├── raspi-peripheral@1.6.0
+135 silly currentTree ├── raspi-pwm@3.1.0
+135 silly currentTree ├── raspi-serial@1.5.0
+135 silly currentTree ├── raw-body@2.1.7
+135 silly currentTree ├── readable-stream@1.1.14
+135 silly currentTree ├── rpio@0.9.12
+135 silly currentTree ├── send@0.14.1
+135 silly currentTree ├─┬ serialport@2.1.2
+135 silly currentTree │ ├── abbrev@1.0.7
+135 silly currentTree │ ├── acorn@1.2.2
+135 silly currentTree │ ├── ansi-regex@2.0.0
+135 silly currentTree │ ├── ansi-styles@2.2.1
+135 silly currentTree │ ├── ansi@0.3.1
+135 silly currentTree │ ├── are-we-there-yet@1.1.2
+135 silly currentTree │ ├── asn1@0.2.3
+135 silly currentTree │ ├── assert-plus@0.2.0
+135 silly currentTree │ ├── ast-types@0.8.16
+135 silly currentTree │ ├── async@1.5.2
+135 silly currentTree │ ├── aws-sign2@0.6.0
+135 silly currentTree │ ├── aws4@1.3.2
+135 silly currentTree │ ├── balanced-match@0.3.0
+135 silly currentTree │ ├─┬ bl@1.1.2
+135 silly currentTree │ │ └── readable-stream@2.0.6
+135 silly currentTree │ ├── block-stream@0.0.8
+135 silly currentTree │ ├── boom@2.10.1
+135 silly currentTree │ ├── brace-expansion@1.1.3
+135 silly currentTree │ ├── caseless@0.11.0
+135 silly currentTree │ ├── chalk@1.1.3
+135 silly currentTree │ ├── combined-stream@1.0.5
+135 silly currentTree │ ├── commander@2.9.0
+135 silly currentTree │ ├── concat-map@0.0.1
+135 silly currentTree │ ├── core-util-is@1.0.2
+135 silly currentTree │ ├── cryptiles@2.0.5
+135 silly currentTree │ ├─┬ dashdash@1.13.1
+135 silly currentTree │ │ └── assert-plus@1.0.0
+135 silly currentTree │ ├── debug@2.2.0
+135 silly currentTree │ ├── deep-extend@0.4.1
+135 silly currentTree │ ├── delayed-stream@1.0.0
+135 silly currentTree │ ├── delegates@1.0.0
+135 silly currentTree │ ├─┬ ecc-jsbn@0.0.1
+135 silly currentTree │ │ └── jsbn@0.0.0
+135 silly currentTree │ ├── escape-string-regexp@1.0.5
+135 silly currentTree │ ├── esmangle-evaluator@1.0.0
+135 silly currentTree │ ├── esprima@2.7.2
+135 silly currentTree │ ├── extend@3.0.0
+135 silly currentTree │ ├── extsprintf@1.0.2
+135 silly currentTree │ ├─┬ falafel@1.2.0
+135 silly currentTree │ │ └── isarray@0.0.1
+135 silly currentTree │ ├── foreach@2.0.5
+135 silly currentTree │ ├── forever-agent@0.6.1
+135 silly currentTree │ ├── form-data@1.0.0-rc4
+135 silly currentTree │ ├── fstream-ignore@1.0.3
+135 silly currentTree │ ├── fstream@1.0.8
+135 silly currentTree │ ├── gauge@1.2.7
+135 silly currentTree │ ├── generate-function@2.0.0
+135 silly currentTree │ ├── generate-object-property@1.2.0
+135 silly currentTree │ ├─┬ getpass@0.1.5
+135 silly currentTree │ │ └── assert-plus@1.0.0
+135 silly currentTree │ ├── github@0.2.4
+135 silly currentTree │ ├── glob@7.0.3
+135 silly currentTree │ ├── graceful-fs@4.1.3
+135 silly currentTree │ ├── graceful-readlink@1.0.1
+135 silly currentTree │ ├── har-validator@2.0.6
+135 silly currentTree │ ├── has-ansi@2.0.0
+135 silly currentTree │ ├── has-unicode@2.0.0
+135 silly currentTree │ ├── hawk@3.1.3
+135 silly currentTree │ ├── hoek@2.16.3
+135 silly currentTree │ ├── http-signature@1.1.1
+135 silly currentTree │ ├── inflight@1.0.4
+135 silly currentTree │ ├── inherits@2.0.1
+135 silly currentTree │ ├── ini@1.3.4
+135 silly currentTree │ ├── inline-process-browser@2.0.1
+135 silly currentTree │ ├── is-my-json-valid@2.13.1
+135 silly currentTree │ ├── is-property@1.0.2
+135 silly currentTree │ ├── is-typedarray@1.0.0
+135 silly currentTree │ ├── isarray@1.0.0
+135 silly currentTree │ ├── isstream@0.1.2
+135 silly currentTree │ ├── jodid25519@1.0.2
+135 silly currentTree │ ├── jsbn@0.1.0
+135 silly currentTree │ ├── json-schema@0.2.2
+135 silly currentTree │ ├── json-stringify-safe@5.0.1
+135 silly currentTree │ ├── jsonpointer@2.0.0
+135 silly currentTree │ ├── jsprim@1.2.2
+135 silly currentTree │ ├── lodash._baseslice@4.0.0
+135 silly currentTree │ ├── lodash.pad@4.3.0
+135 silly currentTree │ ├── lodash.padend@4.4.0
+135 silly currentTree │ ├── lodash.padstart@4.4.0
+135 silly currentTree │ ├── lodash.tostring@4.1.2
+135 silly currentTree │ ├── lru-cache@4.0.1
+135 silly currentTree │ ├── mime-db@1.22.0
+135 silly currentTree │ ├── mime-types@2.1.10
+135 silly currentTree │ ├── mime@1.3.4
+135 silly currentTree │ ├── minimatch@3.0.0
+135 silly currentTree │ ├── minimist@0.0.8
+135 silly currentTree │ ├── mkdirp@0.5.1
+135 silly currentTree │ ├── ms@0.7.1
+135 silly currentTree │ ├── nan@2.2.1
+135 silly currentTree │ ├── node-pre-gyp-github@1.1.2
+135 silly currentTree │ ├── node-pre-gyp@0.6.26
+135 silly currentTree │ ├── node-uuid@1.4.7
+135 silly currentTree │ ├── nopt@3.0.6
+135 silly currentTree │ ├── npmlog@2.0.3
+135 silly currentTree │ ├── oauth-sign@0.8.1
+135 silly currentTree │ ├── object-keys@1.0.9
+135 silly currentTree │ ├── once@1.3.3
+135 silly currentTree │ ├── path-is-absolute@1.0.0
+135 silly currentTree │ ├── pinkie-promise@2.0.1
+135 silly currentTree │ ├── pinkie@2.0.4
+135 silly currentTree │ ├── private@0.1.6
+135 silly currentTree │ ├── process-nextick-args@1.0.6
+135 silly currentTree │ ├── pseudomap@1.0.2
+135 silly currentTree │ ├── qs@6.1.0
+135 silly currentTree │ ├─┬ rc@1.1.6
+135 silly currentTree │ │ └── minimist@1.2.0
+135 silly currentTree │ ├── readable-stream@2.1.0
+135 silly currentTree │ ├── recast@0.11.5
+135 silly currentTree │ ├── request@2.72.0
+135 silly currentTree │ ├── rimraf@2.5.2
+135 silly currentTree │ ├── semver@5.1.0
+135 silly currentTree │ ├── sntp@1.0.9
+135 silly currentTree │ ├── source-map@0.5.4
+135 silly currentTree │ ├─┬ sshpk@1.8.1
+135 silly currentTree │ │ └── assert-plus@1.0.0
+135 silly currentTree │ ├── string_decoder@0.10.31
+135 silly currentTree │ ├── stringstream@0.0.5
+135 silly currentTree │ ├── strip-ansi@3.0.1
+135 silly currentTree │ ├── strip-json-comments@1.0.4
+135 silly currentTree │ ├── supports-color@2.0.0
+135 silly currentTree │ ├─┬ tar-pack@3.1.3
+135 silly currentTree │ │ └── readable-stream@2.0.6
+135 silly currentTree │ ├── tar@2.2.1
+135 silly currentTree │ ├─┬ through2@0.6.5
+135 silly currentTree │ │ ├── isarray@0.0.1
+135 silly currentTree │ │ └── readable-stream@1.0.34
+135 silly currentTree │ ├── tough-cookie@2.2.2
+135 silly currentTree │ ├── tunnel-agent@0.4.2
+135 silly currentTree │ ├── tweetnacl@0.13.3
+135 silly currentTree │ ├── uid-number@0.0.6
+135 silly currentTree │ ├── unreachable-branch-transform@0.5.1
+135 silly currentTree │ ├── util-deprecate@1.0.2
+135 silly currentTree │ ├── verror@1.3.6
+135 silly currentTree │ ├── wrappy@1.0.1
+135 silly currentTree │ ├── xtend@4.0.1
+135 silly currentTree │ └── yallist@2.0.0
+135 silly currentTree ├── serve-static@1.11.1
+135 silly currentTree ├── setprototypeof@1.0.1
+135 silly currentTree ├── sf@0.1.7
+135 silly currentTree ├── statuses@1.3.0
+135 silly currentTree ├── streamsearch@0.1.2
+135 silly currentTree ├── string_decoder@0.10.31
+135 silly currentTree ├── type-is@1.6.13
+135 silly currentTree ├── typedarray@0.0.6
+135 silly currentTree ├── unpipe@1.0.0
+135 silly currentTree ├── util-deprecate@1.0.2
+135 silly currentTree ├── utils-merge@1.0.0
+135 silly currentTree ├── vary@1.1.0
+135 silly currentTree ├── wordwrap@0.0.3
+135 silly currentTree └── xtend@4.0.1
+136 silly idealTree linyuxuan
+136 silly idealTree ├── accepts@1.3.3
+136 silly idealTree ├── append-field@0.1.0
+136 silly idealTree ├── array-flatten@1.1.1
+136 silly idealTree ├── bindings@1.2.1
+136 silly idealTree ├── bluebird@3.4.6
+136 silly idealTree ├── body-parser@1.15.2
+136 silly idealTree ├── busboy@0.2.13
+136 silly idealTree ├── bytes@2.4.0
+136 silly idealTree ├─┬ concat-stream@1.5.2
+136 silly idealTree │ ├── isarray@1.0.0
+136 silly idealTree │ └── readable-stream@2.0.6
+136 silly idealTree ├── content-disposition@0.5.1
+136 silly idealTree ├── content-type@1.0.2
+136 silly idealTree ├── cookie-parser@1.4.3
+136 silly idealTree ├── cookie-signature@1.0.6
+136 silly idealTree ├── cookie@0.3.1
+136 silly idealTree ├── core-util-is@1.0.2
+136 silly idealTree ├── debug@2.2.0
+136 silly idealTree ├── define-properties@1.1.2
+136 silly idealTree ├── depd@1.1.0
+136 silly idealTree ├── destroy@1.0.4
+136 silly idealTree ├── dicer@0.2.5
+136 silly idealTree ├── ee-first@1.1.1
+136 silly idealTree ├── encodeurl@1.0.1
+136 silly idealTree ├── escape-html@1.0.3
+136 silly idealTree ├── etag@1.7.0
+136 silly idealTree ├── express@4.14.0
+136 silly idealTree ├── finalhandler@0.5.0
+136 silly idealTree ├── foreach@2.0.5
+136 silly idealTree ├── forwarded@0.1.0
+136 silly idealTree ├── fresh@0.3.0
+136 silly idealTree ├── function-bind@1.1.0
+136 silly idealTree ├── http-errors@1.5.0
+136 silly idealTree ├── i2c-bus@1.1.1
+136 silly idealTree ├── iconv-lite@0.4.13
+136 silly idealTree ├── inherits@2.0.1
+136 silly idealTree ├── ini-builder@1.0.3
+136 silly idealTree ├── ipaddr.js@1.1.1
+136 silly idealTree ├── isarray@0.0.1
+136 silly idealTree ├── media-typer@0.3.0
+136 silly idealTree ├── merge-descriptors@1.0.1
+136 silly idealTree ├── methods@1.1.2
+136 silly idealTree ├── mime-db@1.24.0
+136 silly idealTree ├── mime-types@2.1.12
+136 silly idealTree ├── mime@1.3.4
+136 silly idealTree ├── minimist@0.0.8
+136 silly idealTree ├── mkdirp@0.5.1
+136 silly idealTree ├── ms@0.7.1
+136 silly idealTree ├── multer@1.2.0
+136 silly idealTree ├── nan@2.4.0
+136 silly idealTree ├── negotiator@0.6.1
+136 silly idealTree ├── object-assign@3.0.0
+136 silly idealTree ├── object-keys@1.0.11
+136 silly idealTree ├── object.assign@4.0.4
+136 silly idealTree ├── on-finished@2.3.0
+136 silly idealTree ├── optimist@0.6.1
+136 silly idealTree ├── parseurl@1.3.1
+136 silly idealTree ├── path-to-regexp@0.1.7
+136 silly idealTree ├── process-nextick-args@1.0.7
+136 silly idealTree ├── proxy-addr@1.1.2
+136 silly idealTree ├── qs@6.2.0
+136 silly idealTree ├── range-parser@1.2.0
+136 silly idealTree ├── raspi-board@3.2.0
+136 silly idealTree ├── raspi-gpio@2.3.0
+136 silly idealTree ├── raspi-i2c@3.1.0
+136 silly idealTree ├── raspi-io@6.1.0
+136 silly idealTree ├── raspi-led@1.5.0
+136 silly idealTree ├── raspi-peripheral@1.6.0
+136 silly idealTree ├── raspi-pwm@3.1.0
+136 silly idealTree ├── raspi-serial@1.5.0
+136 silly idealTree ├── raspi-wiringpi@1.0.6
+136 silly idealTree ├── raspi@2.1.0
+136 silly idealTree ├── raw-body@2.1.7
+136 silly idealTree ├── readable-stream@1.1.14
+136 silly idealTree ├── rpio@0.9.12
+136 silly idealTree ├── send@0.14.1
+136 silly idealTree ├─┬ serialport@2.1.2
+136 silly idealTree │ ├── abbrev@1.0.7
+136 silly idealTree │ ├── acorn@1.2.2
+136 silly idealTree │ ├── ansi-regex@2.0.0
+136 silly idealTree │ ├── ansi-styles@2.2.1
+136 silly idealTree │ ├── ansi@0.3.1
+136 silly idealTree │ ├── are-we-there-yet@1.1.2
+136 silly idealTree │ ├── asn1@0.2.3
+136 silly idealTree │ ├── assert-plus@0.2.0
+136 silly idealTree │ ├── ast-types@0.8.16
+136 silly idealTree │ ├── async@1.5.2
+136 silly idealTree │ ├── aws-sign2@0.6.0
+136 silly idealTree │ ├── aws4@1.3.2
+136 silly idealTree │ ├── balanced-match@0.3.0
+136 silly idealTree │ ├─┬ bl@1.1.2
+136 silly idealTree │ │ └── readable-stream@2.0.6
+136 silly idealTree │ ├── block-stream@0.0.8
+136 silly idealTree │ ├── boom@2.10.1
+136 silly idealTree │ ├── brace-expansion@1.1.3
+136 silly idealTree │ ├── caseless@0.11.0
+136 silly idealTree │ ├── chalk@1.1.3
+136 silly idealTree │ ├── combined-stream@1.0.5
+136 silly idealTree │ ├── commander@2.9.0
+136 silly idealTree │ ├── concat-map@0.0.1
+136 silly idealTree │ ├── core-util-is@1.0.2
+136 silly idealTree │ ├── cryptiles@2.0.5
+136 silly idealTree │ ├─┬ dashdash@1.13.1
+136 silly idealTree │ │ └── assert-plus@1.0.0
+136 silly idealTree │ ├── debug@2.2.0
+136 silly idealTree │ ├── deep-extend@0.4.1
+136 silly idealTree │ ├── delayed-stream@1.0.0
+136 silly idealTree │ ├── delegates@1.0.0
+136 silly idealTree │ ├─┬ ecc-jsbn@0.0.1
+136 silly idealTree │ │ └── jsbn@0.0.0
+136 silly idealTree │ ├── escape-string-regexp@1.0.5
+136 silly idealTree │ ├── esmangle-evaluator@1.0.0
+136 silly idealTree │ ├── esprima@2.7.2
+136 silly idealTree │ ├── extend@3.0.0
+136 silly idealTree │ ├── extsprintf@1.0.2
+136 silly idealTree │ ├─┬ falafel@1.2.0
+136 silly idealTree │ │ └── isarray@0.0.1
+136 silly idealTree │ ├── foreach@2.0.5
+136 silly idealTree │ ├── forever-agent@0.6.1
+136 silly idealTree │ ├── form-data@1.0.0-rc4
+136 silly idealTree │ ├── fstream-ignore@1.0.3
+136 silly idealTree │ ├── fstream@1.0.8
+136 silly idealTree │ ├── gauge@1.2.7
+136 silly idealTree │ ├── generate-function@2.0.0
+136 silly idealTree │ ├── generate-object-property@1.2.0
+136 silly idealTree │ ├─┬ getpass@0.1.5
+136 silly idealTree │ │ └── assert-plus@1.0.0
+136 silly idealTree │ ├── github@0.2.4
+136 silly idealTree │ ├── glob@7.0.3
+136 silly idealTree │ ├── graceful-fs@4.1.3
+136 silly idealTree │ ├── graceful-readlink@1.0.1
+136 silly idealTree │ ├── har-validator@2.0.6
+136 silly idealTree │ ├── has-ansi@2.0.0
+136 silly idealTree │ ├── has-unicode@2.0.0
+136 silly idealTree │ ├── hawk@3.1.3
+136 silly idealTree │ ├── hoek@2.16.3
+136 silly idealTree │ ├── http-signature@1.1.1
+136 silly idealTree │ ├── inflight@1.0.4
+136 silly idealTree │ ├── inherits@2.0.1
+136 silly idealTree │ ├── ini@1.3.4
+136 silly idealTree │ ├── inline-process-browser@2.0.1
+136 silly idealTree │ ├── is-my-json-valid@2.13.1
+136 silly idealTree │ ├── is-property@1.0.2
+136 silly idealTree │ ├── is-typedarray@1.0.0
+136 silly idealTree │ ├── isarray@1.0.0
+136 silly idealTree │ ├── isstream@0.1.2
+136 silly idealTree │ ├── jodid25519@1.0.2
+136 silly idealTree │ ├── jsbn@0.1.0
+136 silly idealTree │ ├── json-schema@0.2.2
+136 silly idealTree │ ├── json-stringify-safe@5.0.1
+136 silly idealTree │ ├── jsonpointer@2.0.0
+136 silly idealTree │ ├── jsprim@1.2.2
+136 silly idealTree │ ├── lodash._baseslice@4.0.0
+136 silly idealTree │ ├── lodash.pad@4.3.0
+136 silly idealTree │ ├── lodash.padend@4.4.0
+136 silly idealTree │ ├── lodash.padstart@4.4.0
+136 silly idealTree │ ├── lodash.tostring@4.1.2
+136 silly idealTree │ ├── lru-cache@4.0.1
+136 silly idealTree │ ├── mime-db@1.22.0
+136 silly idealTree │ ├── mime-types@2.1.10
+136 silly idealTree │ ├── mime@1.3.4
+136 silly idealTree │ ├── minimatch@3.0.0
+136 silly idealTree │ ├── minimist@0.0.8
+136 silly idealTree │ ├── mkdirp@0.5.1
+136 silly idealTree │ ├── ms@0.7.1
+136 silly idealTree │ ├── nan@2.2.1
+136 silly idealTree │ ├── node-pre-gyp-github@1.1.2
+136 silly idealTree │ ├── node-pre-gyp@0.6.26
+136 silly idealTree │ ├── node-uuid@1.4.7
+136 silly idealTree │ ├── nopt@3.0.6
+136 silly idealTree │ ├── npmlog@2.0.3
+136 silly idealTree │ ├── oauth-sign@0.8.1
+136 silly idealTree │ ├── object-keys@1.0.9
+136 silly idealTree │ ├── once@1.3.3
+136 silly idealTree │ ├── path-is-absolute@1.0.0
+136 silly idealTree │ ├── pinkie-promise@2.0.1
+136 silly idealTree │ ├── pinkie@2.0.4
+136 silly idealTree │ ├── private@0.1.6
+136 silly idealTree │ ├── process-nextick-args@1.0.6
+136 silly idealTree │ ├── pseudomap@1.0.2
+136 silly idealTree │ ├── qs@6.1.0
+136 silly idealTree │ ├─┬ rc@1.1.6
+136 silly idealTree │ │ └── minimist@1.2.0
+136 silly idealTree │ ├── readable-stream@2.1.0
+136 silly idealTree │ ├── recast@0.11.5
+136 silly idealTree │ ├── request@2.72.0
+136 silly idealTree │ ├── rimraf@2.5.2
+136 silly idealTree │ ├── semver@5.1.0
+136 silly idealTree │ ├── sntp@1.0.9
+136 silly idealTree │ ├── source-map@0.5.4
+136 silly idealTree │ ├─┬ sshpk@1.8.1
+136 silly idealTree │ │ └── assert-plus@1.0.0
+136 silly idealTree │ ├── string_decoder@0.10.31
+136 silly idealTree │ ├── stringstream@0.0.5
+136 silly idealTree │ ├── strip-ansi@3.0.1
+136 silly idealTree │ ├── strip-json-comments@1.0.4
+136 silly idealTree │ ├── supports-color@2.0.0
+136 silly idealTree │ ├─┬ tar-pack@3.1.3
+136 silly idealTree │ │ └── readable-stream@2.0.6
+136 silly idealTree │ ├── tar@2.2.1
+136 silly idealTree │ ├─┬ through2@0.6.5
+136 silly idealTree │ │ ├── isarray@0.0.1
+136 silly idealTree │ │ └── readable-stream@1.0.34
+136 silly idealTree │ ├── tough-cookie@2.2.2
+136 silly idealTree │ ├── tunnel-agent@0.4.2
+136 silly idealTree │ ├── tweetnacl@0.13.3
+136 silly idealTree │ ├── uid-number@0.0.6
+136 silly idealTree │ ├── unreachable-branch-transform@0.5.1
+136 silly idealTree │ ├── util-deprecate@1.0.2
+136 silly idealTree │ ├── verror@1.3.6
+136 silly idealTree │ ├── wrappy@1.0.1
+136 silly idealTree │ ├── xtend@4.0.1
+136 silly idealTree │ └── yallist@2.0.0
+136 silly idealTree ├── serve-static@1.11.1
+136 silly idealTree ├── setprototypeof@1.0.1
+136 silly idealTree ├── sf@0.1.7
+136 silly idealTree ├── statuses@1.3.0
+136 silly idealTree ├── streamsearch@0.1.2
+136 silly idealTree ├── string_decoder@0.10.31
+136 silly idealTree ├── type-is@1.6.13
+136 silly idealTree ├── typedarray@0.0.6
+136 silly idealTree ├── unpipe@1.0.0
+136 silly idealTree ├── util-deprecate@1.0.2
+136 silly idealTree ├── utils-merge@1.0.0
+136 silly idealTree ├── vary@1.1.0
+136 silly idealTree ├── wordwrap@0.0.3
+136 silly idealTree └── xtend@4.0.1
+137 silly generateActionsToTake Starting
+138 silly install generateActionsToTake
+139 silly generateActionsToTake Finishing
+140 silly diffTrees action count 3
+141 silly diffTrees add raspi-wiringpi@1.0.6
+142 silly diffTrees add raspi@2.1.0
+143 silly diffTrees add raspi-io@6.1.0
+144 silly decomposeActions action count 24
+145 silly decomposeActions fetch raspi-wiringpi@1.0.6
+146 silly decomposeActions extract raspi-wiringpi@1.0.6
+147 silly decomposeActions test raspi-wiringpi@1.0.6
+148 silly decomposeActions preinstall raspi-wiringpi@1.0.6
+149 silly decomposeActions build raspi-wiringpi@1.0.6
+150 silly decomposeActions install raspi-wiringpi@1.0.6
+151 silly decomposeActions postinstall raspi-wiringpi@1.0.6
+152 silly decomposeActions finalize raspi-wiringpi@1.0.6
+153 silly decomposeActions fetch raspi@2.1.0
+154 silly decomposeActions extract raspi@2.1.0
+155 silly decomposeActions test raspi@2.1.0
+156 silly decomposeActions preinstall raspi@2.1.0
+157 silly decomposeActions build raspi@2.1.0
+158 silly decomposeActions install raspi@2.1.0
+159 silly decomposeActions postinstall raspi@2.1.0
+160 silly decomposeActions finalize raspi@2.1.0
+161 silly decomposeActions fetch raspi-io@6.1.0
+162 silly decomposeActions extract raspi-io@6.1.0
+163 silly decomposeActions test raspi-io@6.1.0
+164 silly decomposeActions preinstall raspi-io@6.1.0
+165 silly decomposeActions build raspi-io@6.1.0
+166 silly decomposeActions install raspi-io@6.1.0
+167 silly decomposeActions postinstall raspi-io@6.1.0
+168 silly decomposeActions finalize raspi-io@6.1.0
+169 silly runTopLevelLifecycles Starting
+170 silly executeActions Starting
+171 silly install executeActions
+172 silly doSerial global-install 0
+173 silly doParallel fetch 3
+174 verbose correctMkdir /Users/linyuxuan/.npm/_locks correctMkdir not in flight; initializing
+175 verbose lock using /Users/linyuxuan/.npm/_locks/staging-ca6d187b3aa3e508.lock for /Users/linyuxuan/node_modules/.staging
+176 silly doParallel extract 3
+177 silly extract raspi-wiringpi@1.0.6
+178 silly extract raspi@2.1.0
+179 silly extract raspi-io@6.1.0
+180 verbose unbuild node_modules/.staging/raspi-wiringpi-931dea54
+181 verbose unbuild node_modules/.staging/raspi-io-e4a525dd
+182 verbose unbuild node_modules/.staging/raspi-2a8c20b9
+183 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54 is being purged from base /Users/linyuxuan
+184 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54
+185 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd is being purged from base /Users/linyuxuan
+186 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd
+187 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9 is being purged from base /Users/linyuxuan
+188 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9
+189 verbose tar unpack /Users/linyuxuan/.npm/raspi-wiringpi/1.0.6/package.tgz
+190 verbose tar unpacking to /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54
+191 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54 is being purged
+192 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54
+193 verbose tar unpack /Users/linyuxuan/.npm/raspi-io/6.1.0/package.tgz
+194 verbose tar unpacking to /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd
+195 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd is being purged
+196 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd
+197 verbose tar unpack /Users/linyuxuan/.npm/raspi/2.1.0/package.tgz
+198 verbose tar unpacking to /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9
+199 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9 is being purged
+200 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9
+201 silly gunzTarPerm modes [ '755', '644' ]
+202 silly gunzTarPerm modes [ '755', '644' ]
+203 silly gunzTarPerm modes [ '755', '644' ]
+204 silly gunzTarPerm extractEntry package.json
+205 silly gunzTarPerm extractEntry package.json
+206 silly gunzTarPerm extractEntry package.json
+207 silly gunzTarPerm extractEntry .npmignore
+208 silly gunzTarPerm extractEntry README.md
+209 silly gunzTarPerm extractEntry .npmignore
+210 silly gunzTarPerm extractEntry README.md
+211 silly gunzTarPerm extractEntry .npmignore
+212 silly gunzTarPerm extractEntry README.md
+213 silly gunzTarPerm extractEntry LICENSE
+214 silly gunzTarPerm extractEntry CHANGELOG.md
+215 silly gunzTarPerm extractEntry LICENSE
+216 silly gunzTarPerm extractEntry CONTRIBUTING.md
+217 silly gunzTarPerm extractEntry LICENSE
+218 silly gunzTarPerm extractEntry gulpfile.js
+219 silly gunzTarPerm extractEntry .eslintrc
+220 silly gunzTarPerm extractEntry install-wiringpi.sh
+221 silly gunzTarPerm extractEntry index.js
+222 silly gunzTarPerm extractEntry binding.gyp
+223 silly gunzTarPerm extractEntry CHANGELOG.md
+224 silly gunzTarPerm extractEntry jsconfig.json
+225 silly gunzTarPerm extractEntry CHANGELOG.md
+226 silly gunzTarPerm extractEntry .eslintrc
+227 silly gunzTarPerm extractEntry lib/index.js
+228 silly gunzTarPerm extractEntry src/addon.cc
+229 silly gunzTarPerm extractEntry src/init.cc
+230 silly gunzTarPerm extractEntry src/init.h
+231 silly gunzTarPerm extractEntry lib/index.js
+232 silly gunzTarPerm extractEntry CODE_OF_CONDUCT.md
+233 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54/node_modules is being purged
+234 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54/node_modules
+235 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd/node_modules is being purged
+236 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd/node_modules
+237 silly gentlyRm /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9/node_modules is being purged
+238 verbose gentlyRm don't care about contents; nuking /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9/node_modules
+239 silly doParallel preinstall 3
+240 silly preinstall raspi-wiringpi@1.0.6 /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54
+241 info lifecycle raspi-wiringpi@1.0.6~preinstall: raspi-wiringpi@1.0.6
+242 silly preinstall raspi@2.1.0 /Users/linyuxuan/node_modules/.staging/raspi-2a8c20b9
+243 info lifecycle raspi@2.1.0~preinstall: raspi@2.1.0
+244 silly preinstall raspi-io@6.1.0 /Users/linyuxuan/node_modules/.staging/raspi-io-e4a525dd
+245 info lifecycle raspi-io@6.1.0~preinstall: raspi-io@6.1.0
+246 silly lifecycle raspi-wiringpi@1.0.6~preinstall: no script for preinstall, continuing
+247 silly lifecycle raspi@2.1.0~preinstall: no script for preinstall, continuing
+248 silly lifecycle raspi-io@6.1.0~preinstall: no script for preinstall, continuing
+249 silly doReverseSerial remove 0
+250 silly doSerial move 0
+251 silly doSerial finalize 3
+252 silly finalize /Users/linyuxuan/node_modules/raspi-wiringpi
+253 silly finalize /Users/linyuxuan/node_modules/raspi
+254 silly finalize /Users/linyuxuan/node_modules/raspi-io
+255 silly doSerial build 3
+256 silly build raspi-wiringpi@1.0.6
+257 info linkStuff raspi-wiringpi@1.0.6
+258 silly linkStuff raspi-wiringpi@1.0.6 has /Users/linyuxuan/node_modules as its parent node_modules
+259 verbose linkBins raspi-wiringpi@1.0.6
+260 verbose linkMans raspi-wiringpi@1.0.6
+261 silly build raspi@2.1.0
+262 info linkStuff raspi@2.1.0
+263 silly linkStuff raspi@2.1.0 has /Users/linyuxuan/node_modules as its parent node_modules
+264 verbose linkBins raspi@2.1.0
+265 verbose linkMans raspi@2.1.0
+266 silly build raspi-io@6.1.0
+267 info linkStuff raspi-io@6.1.0
+268 silly linkStuff raspi-io@6.1.0 has /Users/linyuxuan/node_modules as its parent node_modules
+269 verbose linkBins raspi-io@6.1.0
+270 verbose linkMans raspi-io@6.1.0
+271 silly doSerial global-link 0
+272 silly doParallel update-linked 0
+273 silly doSerial install 3
+274 silly install raspi-wiringpi@1.0.6 /Users/linyuxuan/node_modules/.staging/raspi-wiringpi-931dea54
+275 info lifecycle raspi-wiringpi@1.0.6~install: raspi-wiringpi@1.0.6
+276 verbose lifecycle raspi-wiringpi@1.0.6~install: unsafe-perm in lifecycle true
+277 verbose lifecycle raspi-wiringpi@1.0.6~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/linyuxuan/node_modules/raspi-wiringpi/node_modules/.bin:/Users/linyuxuan/node_modules/.bin:/Users/linyuxuan/.rvm/gems/ruby-2.0.0-p643/bin:/Users/linyuxuan/.rvm/gems/ruby-2.0.0-p643@global/bin:/Users/linyuxuan/.rvm/rubies/ruby-2.0.0-p643/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Users/linyuxuan/.rvm/bin
+278 verbose lifecycle raspi-wiringpi@1.0.6~install: CWD: /Users/linyuxuan/node_modules/raspi-wiringpi
+279 silly lifecycle raspi-wiringpi@1.0.6~install: Args: [ '-c', 'sh install-wiringpi.sh' ]
+280 silly lifecycle raspi-wiringpi@1.0.6~install: Returned: code: 1  signal: null
+281 info lifecycle raspi-wiringpi@1.0.6~install: Failed to exec install script
+282 verbose unlock done using /Users/linyuxuan/.npm/_locks/staging-ca6d187b3aa3e508.lock for /Users/linyuxuan/node_modules/.staging
+283 silly rollbackFailedOptional Starting
+284 silly rollbackFailedOptional Finishing
+285 silly runTopLevelLifecycles Finishing
+286 silly install printInstalled
+287 warn enoent ENOENT: no such file or directory, open '/Users/linyuxuan/package.json'
+288 verbose enoent ENOENT: no such file or directory, open '/Users/linyuxuan/package.json'
+288 verbose enoent This is most likely not a problem with npm itself
+288 verbose enoent and is related to npm not being able to find a file.
+289 warn linyuxuan No description
+290 verbose If you need help, you may report this error at:
+290 verbose     <https://github.com/npm/npm/issues>
+291 warn linyuxuan No repository field.
+292 verbose If you need help, you may report this error at:
+292 verbose     <https://github.com/npm/npm/issues>
+293 warn linyuxuan No README data
+294 verbose If you need help, you may report this error at:
+294 verbose     <https://github.com/npm/npm/issues>
+295 warn linyuxuan No license field.
+296 verbose If you need help, you may report this error at:
+296 verbose     <https://github.com/npm/npm/issues>
+297 verbose stack Error: raspi-wiringpi@1.0.6 install: `sh install-wiringpi.sh`
+297 verbose stack Exit status 1
+297 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+297 verbose stack     at emitTwo (events.js:106:13)
+297 verbose stack     at EventEmitter.emit (events.js:191:7)
+297 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+297 verbose stack     at emitTwo (events.js:106:13)
+297 verbose stack     at ChildProcess.emit (events.js:191:7)
+297 verbose stack     at maybeClose (internal/child_process.js:877:16)
+297 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+298 verbose pkgid raspi-wiringpi@1.0.6
+299 verbose cwd /Users/linyuxuan/Dropbox/WORKSPACE/Nodejs/assign
+300 error Darwin 16.0.0
+301 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "raspi-io"
+302 error node v6.6.0
+303 error npm  v3.10.8
+304 error code ELIFECYCLE
+305 error raspi-wiringpi@1.0.6 install: `sh install-wiringpi.sh`
+305 error Exit status 1
+306 error Failed at the raspi-wiringpi@1.0.6 install script 'sh install-wiringpi.sh'.
+306 error Make sure you have the latest version of node.js and npm installed.
+306 error If you do, this is most likely a problem with the raspi-wiringpi package,
+306 error not with npm itself.
+306 error Tell the author that this fails on your system:
+306 error     sh install-wiringpi.sh
+306 error You can get information on how to open an issue for this project with:
+306 error     npm bugs raspi-wiringpi
+306 error Or if that isn't available, you can get their info via:
+306 error     npm owner ls raspi-wiringpi
+306 error There is likely additional logging output above.
+307 verbose exit [ 1, true ]
