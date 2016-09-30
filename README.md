@@ -99,3 +99,7 @@ API:
 			],
 			"queryStatus":"success"
 		}
+
+4. MQTT function
+	
+	Subscribe topic "FIT5140/sensors" to get pushed real time data.
