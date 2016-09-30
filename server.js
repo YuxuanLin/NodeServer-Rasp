@@ -3,6 +3,8 @@ var express = require('express');
 var fs = require("fs");
 var raspi = require("raspi-io");
 var five = require("johnny-five");
+var mqtt = require('mqtt')
+var client  = mqtt.connect('mqtt://broker.hivemq.com')
 var app = express();
 var file = './data.json';
 
@@ -50,7 +52,17 @@ board.on("ready", function() {
     });
 });
 
+//-------------------------- MQTT system --------------------------
+client.on('connect', () => {  
+  var data = JSON.stringify(sensorData);
+  client.publish('FIT5140/sensors', data);
+  console.log("-----------------Connect to mqtt------------------");
+})
 
+setInterval(function() { 
+	var data = JSON.stringify(sensorData);
+  	client.publish('FIT5140/sensors', data);
+}, 2000);
 //-------------------------- File system --------------------------
 
 // Add object to file
