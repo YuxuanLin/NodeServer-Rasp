@@ -1,16 +1,17 @@
 //Header, import
 var express = require('express');
 var fs = require("fs");
-var raspi = require("raspi-io");
-var five = require("johnny-five");
+// var raspi = require("raspi-io");
+// var five = require("johnny-five");
 var app = express();
-
+var file = './data.json';
 // RGB transfer function
 function toRGB(R,G,B){
 	return "#"+(R).toString(16)+(G).toString(16)+(B).toString(16);
 }
 
 //-------------------------- Global variables --------------------------
+
 var celsiusGB = 1;
 var pressureGB = 2;
 var metersGB = 3;
@@ -20,48 +21,82 @@ var timeStamp = date.getTime();
 
 
 
-//-------------------------- MPL3115A2 --------------------------
-var board = new five.Board({
-    io: new raspi()
-});
+//---------------------------- MPL3115A2 ------------------------------
+// var board = new five.Board({
+//     io: new raspi()
+// });
 
-board.on("ready", function() {
-    var multi = new five.Multi({
-        controller: "MPL3115A2",
-        // Get elevation in metres from http://www.whatismyelevation.com
-        elevation: 92
-    });
-    console.log("Server ready to begin processing...");
+// board.on("ready", function() {
+//     var multi = new five.Multi({
+//         controller: "MPL3115A2",
+//         // Get elevation in metres from http://www.whatismyelevation.com
+//         elevation: 92
+//     });
+//     console.log("Server ready to begin processing...");
 
-    multi.on("change", function() {
-		timeStamp = date.getTime();
-    	celsiusGB = this.thermometer.celsius;
-    	pressureGB = this.barometer.pressure;
-    	metersGB = this.altimeter.meters;
+//     multi.on("change", function() {
+// 		timeStamp = date.getTime();
+//     	celsiusGB = this.thermometer.celsius;
+//     	pressureGB = this.barometer.pressure;
+//     	metersGB = this.altimeter.meters;
 
-        // console.log("Therometer:celsius: ", this.thermometer.celsius);
-        // console.log("Barometer:pressure = ", this.barometer.pressure);
-        // console.log("Altimeter = ", this.altimeter.meters);
-    });
-});
+//         // console.log("Therometer:celsius: ", this.thermometer.celsius);
+//         // console.log("Barometer:pressure = ", this.barometer.pressure);
+//         // console.log("Altimeter = ", this.altimeter.meters);
+//     });
+// });
 
 
 //-------------------------- File system --------------------------
 
 // Data structure:  timeStamp,celsiusGB,pressureGB,metersGB,RGB;
 function writeToFile(){
-	// timeStamp = date.getTime();
-	var data = timeStamp + "," + celsiusGB + "," + pressureGB + "," + metersGB + "," + RGB + ";";
-
-	fs.appendFile('records.txt', data, function (err) {
-
-	});
+	//Prepare data
+	timeStamp = date.getTime();
+	var rawdata =  {
+		'Time': timeStamp,
+		'Celsius': celsiusGB,
+		'Pressure': pressureGB,
+		'Meters': metersGB,
+		'RGB': RGB
+	};
+	appendObject(rawdata);
 }
 
+// Add object to file
+function appendObject(obj){
+	var raw_data;
+
+	try {
+		//Read data from file: ./data.json
+		raw_data = fs.readFileSync(file);
+	} catch (err) {
+		//If file doesn't exist, create a new one with '[]'
+		console.log('data.json does not exist');
+	  	fs.writeFile(file, '[]', function (err) {
+	        if (err) throw err;
+	        console.log('data.json has been created');
+    	});
+	}
+	
+	try {
+    	var obj_data = JSON.parse(raw_data);//parse json string to object
+	} catch (e) {
+		//No data exist in file, create '[]' now
+	  	console.log('No data existed in file data.json, creating now...');
+	    var obj_data = [];
+	}
+
+	obj_data.push(obj);// add items to array in nodejs
+	var mod_data = JSON.stringify(obj_data)// Json object to string
+	fs.writeFileSync(file, JSON.stringify(obj_data)); // Write to file
+
+}
+
+//Start loop
 setInterval(function() { 
 	writeToFile();
 	console.log("setInterval: It's been one second!"); 
-
 }, 1000);
 
 
