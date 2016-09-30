@@ -141,7 +141,7 @@ app.get('/time',function(req,res){
 			var history = getHistoryDataObjects();
 			result.history = [];
 			for (var i = 0; i < history.length; i++) {
-				if ( (history[i].timeStamp >req.query.start) && (history[i].timeStamp >req.query.end)){
+				if ( (history[i].timeStamp >= req.query.start) && (history[i].timeStamp <= req.query.end)){
 					result.history.push(history[i]);
 				}
 			}
