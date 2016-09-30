@@ -24,7 +24,32 @@ API:
 	
 	Result:
 		
-		{"queryStatus":"success","history":[{"timeStamp":1475233271988,"celsius":22,"pressure":99.5186,"meters":91.1,"RGB":0},{"timeStamp":1475233273932,"celsius":22,"pressure":99.5171,"meters":91.2,"RGB":0},{"timeStamp":1475233273932,"celsius":22,"pressure":99.5171,"meters":91.2,"RGB":0}]}
+		{
+			"queryStatus":"success",
+			"history":[
+				{
+					"timeStamp":1475233271988,
+					"celsius":22,
+					"pressure":99.5186,
+					"meters":91.1,
+					"RGB":0
+				},
+				{
+					"timeStamp":1475233273932,
+					"celsius":22,
+					"pressure":99.5171,
+					"meters":91.2,
+					"RGB":0
+				},
+				{
+					"timeStamp":1475233273932,
+					"celsius":22,
+					"pressure":99.5171,
+					"meters":91.2,
+					"RGB":0
+				}
+			]
+		}
 
 3. return a specific number of updates stored in history by a start and end time range as specified by the client:
 	http://example.com:3000/time?start=4&end=sdfa3
@@ -34,4 +59,43 @@ API:
 	
 	Result:
 		
-		{"history":[{"timeStamp":1475233382950,"celsius":22,"pressure":99.5124,"meters":91.2,"RGB":0},{"timeStamp":1475233382950,"celsius":22,"pressure":99.5124,"meters":91.2,"RGB":0},{"timeStamp":1475233384954,"celsius":22,"pressure":99.5149,"meters":91.2,"RGB":0},{"timeStamp":1475233386865,"celsius":22,"pressure":99.5129,"meters":91.2,"RGB":0},{"timeStamp":1475233386865,"celsius":22,"pressure":99.5129,"meters":91.2,"RGB":0}],"queryStatus":"success"}
+		{
+			"history":[
+				{
+					"timeStamp":1475233382950,
+					"celsius":22,
+					"pressure":99.5124,
+					"meters":91.2,
+					"RGB":0
+				},
+				{
+					"timeStamp":1475233382950,
+					"celsius":22,
+					"pressure":99.5124,
+					"meters":91.2
+					,"RGB":0
+				},
+				{
+					"timeStamp":1475233384954,
+					"celsius":22,
+					"pressure":99.5149,
+					"meters":91.2,
+					"RGB":0
+				},
+				{
+					"timeStamp":1475233386865,
+					"celsius":22,
+					"pressure":99.5129,
+					"meters":91.2,
+					"RGB":0
+				},
+				{
+					"timeStamp":1475233386865,
+					"celsius":22,
+					"pressure":99.5129,
+					"meters":91.2,
+					"RGB":0
+				}
+			],
+			"queryStatus":"success"
+		}
