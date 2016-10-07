@@ -7,7 +7,7 @@ var mqtt = require('mqtt')
 var client  = mqtt.connect('mqtt://broker.hivemq.com')
 var app = express();
 var file = './data.json';
-
+var i2c = require("i2c");//i2c for color sensor
 
 //-------------------------- Global variables --------------------------
 // RGB transfer function
@@ -17,14 +17,29 @@ function toRGB(R,G,B){
 // Sensor Data Constructor
 function SensorData() {
   // always initialize all instance properties
-  this.timeStamp = 0;
-  this.celsius = 0; 
-  this.pressure = 0;
-  this.meters = 0;
-  this.RGB = 0;
+	this.timeStamp = 0;
+	this.celsius = 0; 
+	this.pressure = 0;
+	this.meters = 0;
+	this.R = 0;
+	this.G = 0;
+	this.B = 0;
+	this.C = 0;
 }
 
+
 var sensorData = new SensorData();
+
+// TCS34725 Sensor 
+var address = 0x29;// i2c bus address
+var version = 0x44;// Sensor version
+var rgbSensor = new i2c(address, {device: '/dev/i2c-1'});
+
+// Variables to store colour values
+var red;
+var green;
+var blue;
+var clear;
 
 //---------------------------- MPL3115A2 ------------------------------
 var board = new five.Board({
@@ -39,18 +54,63 @@ board.on("ready", function() {
     });
     console.log("Server ready to begin processing...");
 
+	// Run setup if we can retreive correct sensor version for TCS34725 sensor
+	rgbSensor.writeByte(0x80|0x12, function(err){});
+	rgbSensor.readByte(function(err, res) {
+	    if(res == version) {
+	        setup();
+		   	captureColours();//Fetch data from sensor and put them into sensorData
+	    }
+	});
+
     multi.on("change", function() {
     	var date = new Date();
 		sensorData.timeStamp = date.getTime();
     	sensorData.celsius = this.thermometer.celsius;
     	sensorData.pressure = this.barometer.pressure;
     	sensorData.meters = this.altimeter.meters;
+
+    	captureColours();
 	 	console.log("Therometer:celsius: ", this.thermometer.celsius);
         console.log("Barometer:pressure = ", this.barometer.pressure);
         console.log("Altimeter = ", this.altimeter.meters);
         console.log("Time = ", sensorData.timeStamp);
+   
     });
 });
+
+//---------------------------- TCS34725 ------------------------------
+
+function setup() {
+    // Enable register
+    rgbSensor.writeByte(0x80|0x00, function(err){});
+
+    // Power on and enable RGB sensor
+    rgbSensor.writeByte(0x01|0x02, function(err){});
+	
+    // Read results from Register 14 where data values are stored
+    // See TCS34725 Datasheet for breakdown
+    rgbSensor.writeByte(0x80|0x14, function(err){});
+}
+
+function captureColours() {
+    // Read the information, output RGB as 16bit number
+    rgbSensor.read(8, function(err, res) {
+        // Colours are stored in two 8bit address registers, we need to combine them into a 16bit number, 0 and 1 are for clear registers
+        // Read byte, 8bit, -->  16bit int
+        sensorData.C = res[1] << 8 | res[0];
+        sensorData.R = res[3] << 8 | res[2];
+        sensorData.G = res[5] << 8 | res[4];
+        sensorData.B = res[7] << 8 | res[6];
+
+        // Print data to console
+        console.log("Clear: " + sensorData.C);
+        console.log("Red: " + sensorData.R);
+        console.log("Green: " + sensorData.G);
+        console.log("Blue: " + sensorData.B);
+    });
+}
+
 
 //-------------------------- MQTT system --------------------------
 client.on('connect', () => {  
@@ -62,7 +122,9 @@ client.on('connect', () => {
 setInterval(function() { 
 	var data = JSON.stringify(sensorData);
   	client.publish('FIT5140/sensors', data);
-}, 2000);
+}, 1000);
+
+
 //-------------------------- File system --------------------------
 
 // Add object to file
@@ -126,6 +188,7 @@ app.get('/history',function(req,res){
 		
 		result.queryStatus = 'success';
 		result.history = history.slice(history.length - req.query.num);
+		result.resultNumber = result.history.length;
 	}
 	else{
 		result.queryStatus = 'No so many enties';
@@ -158,6 +221,7 @@ app.get('/time',function(req,res){
 				}
 			}
 			result.queryStatus = 'success';
+			result.resultNumber = result.history.length;
 		}else{
 			result.queryStatus = 'Query start time or end time not valid: could be one of those reasons: 1. start time is bigger than end time; 2. end time is bigger then time when this request received';
 		}
