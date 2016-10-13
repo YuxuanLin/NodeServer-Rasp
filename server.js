@@ -14,6 +14,7 @@ var i2c = require("i2c");//i2c for color sensor
 function toRGB(R,G,B){
 	return "#"+(R).toString(16)+(G).toString(16)+(B).toString(16);
 }
+
 // Sensor Data Constructor
 function SensorData() {
   // always initialize all instance properties
@@ -26,7 +27,6 @@ function SensorData() {
 	this.B = 0;
 	this.C = 0;
 }
-
 
 var sensorData = new SensorData();
 
@@ -42,10 +42,12 @@ var blue;
 var clear;
 
 //---------------------------- MPL3115A2 ------------------------------
+//Create board for detecting sensor MPL3115
 var board = new five.Board({
     io: new raspi()
 });
 
+//Main loop for detecting sensors
 board.on("ready", function() {
     var multi = new five.Multi({
         controller: "MPL3115A2",
@@ -63,6 +65,7 @@ board.on("ready", function() {
 	    }
 	});
 
+	//fetch data on change of MPL
     multi.on("change", function() {
     	var date = new Date();
 		sensorData.timeStamp = date.getTime();
@@ -81,6 +84,7 @@ board.on("ready", function() {
 
 //---------------------------- TCS34725 ------------------------------
 
+// Set up for TCS34725
 function setup() {
     // Enable register
     rgbSensor.writeByte(0x80|0x00, function(err){});
@@ -93,6 +97,7 @@ function setup() {
     rgbSensor.writeByte(0x80|0x14, function(err){});
 }
 
+// Fetch colors from color sensor
 function captureColours() {
     // Read the information, output RGB as 16bit number
     rgbSensor.read(8, function(err, res) {
@@ -113,12 +118,14 @@ function captureColours() {
 
 
 //-------------------------- MQTT system --------------------------
+// For Mqtt connection, set subject
 client.on('connect', () => {  
   var data = JSON.stringify(sensorData);
   client.publish('FIT5140/sensors', data);
   console.log("-----------------Connect to mqtt------------------");
 })
 
+// Push data every one second
 setInterval(function() { 
 	var data = JSON.stringify(sensorData);
   	client.publish('FIT5140/sensors', data);
@@ -136,6 +143,7 @@ function appendObject(obj){
 	fs.writeFileSync(file, JSON.stringify(obj_data)); // Write to file
 }
 
+// Get history data from history file
 function getHistoryDataObjects(){
 	var raw_data;
 	//Read data from file: ./data.json
